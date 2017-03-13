@@ -1,0 +1,41 @@
+<html>
+Sveiks!
+<br>
+<a href="https://213.175.92.37/~x111REB579/211.html">Cipari</a>
+</br>
+ <h1>My first project on ShareLatex</h1>
+<p>
+<a href="https://www.sharelatex.com/project/58983310fbed133341db9ca7">ShareLatex</a>
+</p>
+<hr>
+<h2>Dec to bin in JavaScript</h2>
+<b>Insert Decimal Number: </b><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" />
+<input type="button" value="Convert!" onclick="dec2bin()" /
+<br><br>
+<div id = "result"></div>
+
+<script type = "text/javascript">
+
+function dec2bin() {
+var x = document.getElementById("deci").value;
+if ((/[^0-9]/g.test(x)) || x == "") {
+alert ("You must enter an integer decimal number!");
+document.getElementById("deci").value = "";
+document.getElementById("deci").focus();
+return false;
+}
+
+x = parseInt(x);
+var bin = x.toString(2);
+var dec  = x.toString(10).toUpperCase();
+var octal = x.toString(8);
+
+
+var figs = "The binary representation of " + x + " is " + bin + "<br>";
+figs = figs + "The hexadecimal representation of " + x + " is " + dec + "<br>";
+document.getElementById("result").innerHTML = figs;
+}
+</script>
+
+<hr> 
+</html>

@@ -1,0 +1,64 @@
+<html>
+Sveiks!
+<br>
+<a href="https://213.175.92.37/~x111REB579/211.html">Cipari</a>
+</br>
+ <h1>My first project on ShareLatex</h1>
+<p>
+<a href="https://www.sharelatex.com/project/58983310fbed133341db9ca7">ShareLatex</a>
+</p>
+<hr>
+<p>
+<h2>Dec to bin in JavaScript</h2>
+<b>Insert Decimal Number: </b><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" />
+<input type="button" value="Convert!" onclick="dec2bin()" />
+<br><br>
+<div id = "result"></div>
+
+<script type = "text/javascript">
+
+function dec2bin() {
+var x = document.getElementById("deci").value;
+if ((/[^0-9]/g.test(x)) || x == "") {
+alert ("You must enter an integer decimal number!");
+document.getElementById("deci").value = "";
+document.getElementById("deci").focus();
+return false;
+}
+
+x = parseInt(x);
+var bin = x.toString(2);
+
+var figs = "The binary representation of " + x + " is " + bin + "<br>";
+document.getElementById("result").innerHTML = figs;
+}
+</script>
+<hr>
+</p>
+
+<p>
+<h3>Bin to dec in JavaScript</h3>
+<b>Insert Binary Number: </b><input type = "text" name = "bina" id = "bina" size = "15" maxlength = "15" />
+<input type="button" value="Convert!" onclick="bin2dec()" />
+<br><br>
+<div id = "result2"></div>
+
+<script type = "text/javascript">
+
+function bin2dec() {
+var x = document.getElementById("bina").value;
+if ((/[^0-1]/g.test(x)) || x == "") {
+alert ("You must enter an integer binary number!");
+document.getElementById("bina").value = "";
+document.getElementById("bina").focus();
+return false;
+}
+x = parseInt(x,2);
+var dec = x.toString(10);
+var figs = "The decimal representation of " + x + " is " + dec + "<br>";
+document.getElementById("result2").innerHTML = figs;
+}
+</script>
+<hr>
+</p> 
+</html>

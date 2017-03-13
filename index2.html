@@ -1,0 +1,23 @@
+<h3>Bin to dec in JavaScript</h3>
+<b>Insert Binary Number: </b><input type = "text" name = "bina" id = "bina" size = "15" maxlength = "15" />
+<input type="button" value="Convert!" onclick="bin2dec()" />
+<br><br>
+<div id = "result"></div>
+
+<script type = "text/javascript">
+
+function bin2dec() {
+var x = document.getElementById("bina").value;
+if ((/[^0-1]/g.test(x)) || x == "") {
+alert ("You must enter an integer binary number!");
+document.getElementById("bina").value = "";
+document.getElementById("bina").focus();
+return false;
+}
+x = parseInt(x);
+var dec = x.toString(10);
+var figs = "The decimal representation of " + x + " is " + dec + "<br>";
+document.getElementById("result").innerHTML = figs;
+}
+</script>
+<hr> 
